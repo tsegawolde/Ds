@@ -1,0 +1,22 @@
+@RestController
+
+@RequestMapping("/client")
+
+public class ClientController {
+
+  @Autowired
+
+  private ApiProxy apiProxy;
+
+  @GetMapping("/technologyInfo/{platform}")
+
+  public ResponseModel getTechnologyInfo(@PathVariable("platform") String platform) {
+
+    /**API calling using proxy interface and mapping into ResponseModel named Object.**/
+
+    ResponseModel responseModel = apiProxy.retrieveTechnologyInfo(platform);
+
+    return responseModel;
+
+                                                                                    
+}
