@@ -1,0 +1,11 @@
+# application unique name 
+
+spring.application.name=micro-service-server
+
+# application will be running under this port 
+
+server.port=4000
+
+# end point of load balancing server 
+
+eureka.client.service-url.default-zone=http://localhost:8761/eureka
